@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#cf {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+#cf img {
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.bottom {
+  opacity: 0;
+}
+
+#cf:hover .bottom {
+  opacity: 1;
+}
+
+#cf:hover .top {
+  opacity: 0;
+}
