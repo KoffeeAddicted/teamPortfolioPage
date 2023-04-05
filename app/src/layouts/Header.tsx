@@ -4,7 +4,7 @@ import { BsTelephone } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 const Header = () => {
   return (
-    <div className='w-full h-[20vh] bg-blue-500 flex items-center items-between'>
+    <div className='w-full h-[20vh] flex items-center font-["Ikaros"] items-between'>
       <div className='w-full h-fit flex items-center justify-between'>
         <div id='cf' className='ml-10'>
           <img className='top' src={coffee_outline} alt='logo' />
