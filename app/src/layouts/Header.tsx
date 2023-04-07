@@ -2,6 +2,7 @@ import coffee_outline from '../assets/images/logos/coffee_outline.png';
 import coffee_bold from '../assets/images/logos/coffee_bold.png';
 import { BsTelephone } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
+import { ButtonSlider } from '../components';
 const Header = () => {
   return (
     <div className='top-0 sticky w-full h-[20vh] flex items-center font-["Ikaros"] items-between'>
@@ -18,7 +19,7 @@ const Header = () => {
         <div className='flex gap-10 mr-10 items-center'>
           <BsTelephone />
           <AiOutlineMail />
-          <div>Button Slider</div>
+          <ButtonSlider />
         </div>
       </div>
     </div>
