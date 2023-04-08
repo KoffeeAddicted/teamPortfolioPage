@@ -33,3 +33,9 @@
 #cf:hover .top {
   opacity: 0;
 }
+
+.header_menu {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

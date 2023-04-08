@@ -6,17 +6,17 @@ import { ButtonSlider } from '../components';
 const Header = () => {
   return (
     <div className='top-0 absolute w-full h-[20vh] flex items-center font-["Ikaros"] text-[18px] items-between'>
-      <div className='w-full h-fit flex items-center justify-between'>
+      <div className='w-full h-fit relative flex items-center justify-between'>
         <div id='cf' className='ml-10'>
           <img className='top' src={coffee_outline} alt='logo' />
           <img className='bottom' src={coffee_bold} alt='logo_hover' />
         </div>
-        <div className='ml-[100px] flex gap-[100px]'>
+        <div className='flex gap-[80px] absolute header_menu'>
           <div>Home</div>
           <div>Contact</div>
           <div>About</div>
         </div>
-        <div className='flex gap-10 mr-10 items-center'>
+        <div className='flex gap-10 mr-12 items-center'>
           <BsTelephone />
           <AiOutlineMail />
           <ButtonSlider />
