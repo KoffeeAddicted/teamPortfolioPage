@@ -29,7 +29,7 @@
   left: 0;
   width: 42px;
   height: 24px;
-  background: #e4ecfa;
+  background: rgba(153, 163, 186, 0.35);
   transition: all 0.3s ease;
 }
 .switch input + span:after {
@@ -58,7 +58,7 @@
   width: 2px;
   height: 2px;
   border-radius: 1px;
-  background: #fff;
+  background: rgba(153, 163, 186, 0.35);
   position: absolute;
   display: block;
   left: 50%;
