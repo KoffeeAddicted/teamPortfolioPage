@@ -5,7 +5,7 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { ButtonSlider } from '../components';
 const Header = () => {
   return (
-    <div className='top-0 absolute w-full h-[20vh] flex items-center font-["Ikaros"] text-[18px] items-between'>
+    <div className='top-0 absolute w-full h-[20vh] flex items-center font-["Ikaros"] text-[18px] items-between z-20'>
       <div className='w-full h-fit relative flex items-center justify-between'>
         <div id='cf' className='ml-10'>
           <img className='top' src={coffee_outline} alt='logo' />
