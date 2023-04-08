@@ -10,12 +10,7 @@ import clsx from 'clsx';
 const Header = () => {
   const { toggleSidebar } = useProSidebar();
   return (
-    <div
-      className={clsx(
-        'top-0 absolute w-full h-[20vh] flex items-center font-["Ikaros"] text-[14px] items-between',
-        'lg:text-[18px]'
-      )}
-    >
+    <div className='top-0 absolute w-full h-[20vh] flex items-center font-["Ikaros"] text-[18px] items-between z-20'>
       <div className='w-full h-fit relative flex items-center justify-between'>
         <div id='cf' className='ml-10'>
           <img className='top' src={coffee_outline} alt='logo' />
