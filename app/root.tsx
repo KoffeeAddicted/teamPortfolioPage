@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import { PublicLayout } from './src/layouts';
+import { ProSidebarProvider } from 'react-pro-sidebar';
 
 import stylesheet from '~/tailwind.css';
 import button from './src/components/buttons/styles/button.css';
@@ -31,9 +32,11 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <PublicLayout>
-          <Outlet />
-        </PublicLayout>
+        <ProSidebarProvider>
+          <PublicLayout>
+            <Outlet />
+          </PublicLayout>
+        </ProSidebarProvider>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
