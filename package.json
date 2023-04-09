@@ -12,11 +12,13 @@
     "@remix-run/node": "^1.14.3",
     "@remix-run/react": "^1.14.3",
     "@remix-run/serve": "^1.14.3",
+    "clsx": "^1.2.1",
     "isbot": "^3.6.5",
     "re-carousel": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0"
+    "react-icons": "^4.8.0",
+    "react-pro-sidebar": "^1.0.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.14.3",
