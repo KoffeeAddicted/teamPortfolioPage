@@ -9,13 +9,19 @@ const CarouselFull = () => {
         loop
         frames={[
           <div style={{ backgroundColor: 'tomato', height: '100%' }}>
-            Frame 1
+            <div className='w-full h-full flex justify-center items-center'>
+              Frame 1
+            </div>
           </div>,
           <div style={{ backgroundColor: 'orange', height: '100%' }}>
-            Frame 2
+            <div className='w-full h-full flex justify-center items-center'>
+              Frame 2
+            </div>
           </div>,
           <div style={{ backgroundColor: 'orchid', height: '100%' }}>
-            Frame 3
+            <div className='w-full h-full flex justify-center items-center'>
+              Frame 3
+            </div>
           </div>,
         ]}
         widgets={[ButtonNavigate]}
