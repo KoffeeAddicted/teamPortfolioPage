@@ -16,10 +16,11 @@ const Header = () => {
   return (
     <div
       className={clsx(
-        'top-0 w-full h-[20vh] absolute flex items-center font-["Ikaros"] text-[14px] items-between z-20',
+        'top-0 w-full absolute flex items-center font-["Ikaros"] text-[14px] items-between z-20',
         'lg:text-[18px]',
-        scrollDirection === 'up' &&
-          'sticky border border-t-1 h-[10vh] bg-[white]'
+        scrollDirection === 'up'
+          ? 'sticky border border-t-1 h-[10vh] bg-[white]'
+          : 'h-[20vh]'
       )}
     >
       <div className='w-full h-fit relative flex items-center justify-between'>
