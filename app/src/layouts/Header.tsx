@@ -7,13 +7,19 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { ButtonSlider } from '../components';
 import clsx from 'clsx';
+import { useSrollDirection } from '../hooks';
+
 const Header = () => {
   const { toggleSidebar } = useProSidebar();
+  const scrollDirection = useSrollDirection();
+
   return (
     <div
       className={clsx(
-        'top-0 absolute w-full h-[20vh] flex items-center font-["Ikaros"] text-[14px] items-between',
-        'lg:text-[18px]'
+        'top-0 w-full h-[20vh] absolute flex items-center font-["Ikaros"] text-[14px] items-between z-20',
+        'lg:text-[18px]',
+        scrollDirection === 'up' &&
+          'sticky border border-t-1 h-[10vh] bg-[white]'
       )}
     >
       <div className='w-full h-fit relative flex items-center justify-between'>
