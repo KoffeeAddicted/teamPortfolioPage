@@ -7,6 +7,11 @@
   src: url('../app/src/assets/fonts/Ikaros2.ttf');
 }
 
+@font-face {
+  font-family: 'MuseoModerno';
+  src: url('../app/src/assets/fonts/MuseoModernoRegular.ttf');
+}
+
 #cf {
   position: relative;
   width: 48px;
