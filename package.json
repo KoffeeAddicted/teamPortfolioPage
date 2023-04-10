@@ -13,12 +13,18 @@
     "@remix-run/react": "^1.14.3",
     "@remix-run/serve": "^1.14.3",
     "clsx": "^1.2.1",
+    "i18next": "^22.4.14",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-fs-backend": "^2.1.1",
+    "i18next-http-backend": "^2.2.0",
     "isbot": "^3.6.5",
     "re-carousel": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0",
     "react-icons": "^4.8.0",
-    "react-pro-sidebar": "^1.0.0"
+    "react-pro-sidebar": "^1.0.0",
+    "remix-i18next": "^5.1.1"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.14.3",
