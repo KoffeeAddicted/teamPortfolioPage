@@ -1,0 +1,42 @@
+.scrolling-words-box {
+  height: 90px;
+  overflow: hidden;
+}
+.scrolling-words-box ul {
+  margin: 0 0.625rem;
+  animation: scrollUp 4s infinite;
+}
+.scrolling-words-box ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 5rem;
+  list-style: none;
+}
+
+@media all and (max-width: 1024px) {
+  .scrolling-words-box {
+    height: 60px;
+  }
+  .scrolling-words-box ul li {
+    height: 4rem;
+  }
+}
+@media all and (max-width: 640px) {
+  .scrolling-words-box {
+    height: 45px;
+  }
+  .scrolling-words-box ul li {
+    height: 2.5rem;
+  }
+}
+@keyframes scrollUp {
+  15%, 25% {
+    transform: translateY(-33.3333333333%);
+  }
+  40%, 50% {
+    transform: translateY(-66.6666666667%);
+  }
+}
+
+/*# sourceMappingURL=typography.css.map */

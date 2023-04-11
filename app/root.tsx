@@ -15,6 +15,7 @@ import i18next from './src/i18n/i18next.server';
 
 import stylesheet from '~/tailwind.css';
 import button from './src/components/buttons/styles/button.css';
+import typography from './src/components/typographys/styles/typography.css';
 
 export async function loader({ request }: LoaderArgs) {
   let locale = await i18next.getLocale(request);
@@ -24,6 +25,7 @@ export async function loader({ request }: LoaderArgs) {
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
   { rel: 'stylesheet', href: button },
+  { rel: 'stylesheet', href: typography },
 ];
 
 export const meta: MetaFunction = () => ({
