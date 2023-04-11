@@ -1,0 +1,63 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: 'Develop pull request validation'
+
+on:
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14.x
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
+    
+  notification-success:
+    name: "Notification when build success"
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{secrets.TELEGRAM_GROUP_ID}}
+        token: ${{secrets.TELEGRAM_BOT_TOKEN}}
+        message: |
+          Repository: ${{ github.repository }}
+          The GitHub Actions workflow has successfully built the code. Please review and approve the code for merging.
+          Commit: ${{ github.sha }}
+          From Branch: ${{ github.head_ref }}
+          To Branch: dev
+          Requested by: ${{ github.actor }}
+          Pull Request URL: ${{ github.event.pull_request.html_url }}
+          
+  notification-fail:
+    name: "Notification when build fail"
+    needs: [build]
+    runs-on: ubuntu-latest
+    if: failure()
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{secrets.TELEGRAM_GROUP_ID}}
+        token: ${{secrets.TELEGRAM_BOT_TOKEN}}
+        message: |
+          Repository: ${{ github.repository }}
+          "The GitHub Actions workflow failed to build code."
+          Commit: ${{ github.sha }}
+          From Branch: ${{ github.head_ref }}
+          To Branch: dev
+          Requested by: ${{ github.actor }}
+          Pull Request URL: ${{ github.event.pull_request.html_url }}
+

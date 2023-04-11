@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Ikaros';
+  src: url('../app/src/assets/fonts/Ikaros2.ttf');
+}
+
+@font-face {
+  font-family: 'MuseoModerno';
+  src: url('../app/src/assets/fonts/MuseoModernoRegular.ttf');
+}
+
+#cf {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+#cf img {
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.bottom {
+  opacity: 0;
+}
+
+#cf:hover .bottom {
+  opacity: 1;
+}
+
+#cf:hover .top {
+  opacity: 0;
+}
+
+.header_menu {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
