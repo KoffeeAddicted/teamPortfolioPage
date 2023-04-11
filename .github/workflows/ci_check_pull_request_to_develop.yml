@@ -34,9 +34,10 @@ jobs:
         token: ${{secrets.TELEGRAM_BOT_TOKEN}}
         message: |
           Repository: ${{ github.repository }}
-          The GitHub Actions workflow successfully built and merged code in the branch ${{ github.head_ref }}.
+          The GitHub Actions workflow successfully built and merged code.
           Commit: ${{ github.sha }}
-          Branch: ${{ github.head_ref }}
+          From Branch: ${{ github.head_ref }}
+          To Branch: dev
           Requested by: ${{ github.actor }}
           
   notification-fail:
@@ -52,7 +53,8 @@ jobs:
         token: ${{secrets.TELEGRAM_BOT_TOKEN}}
         message: |
           Repository: ${{ github.repository }}
-          "The GitHub Actions workflow failed to build code in the branch ${{ github.head_ref }}."
+          "The GitHub Actions workflow failed to build code."
           Commit: ${{ github.sha }}
-          Branch: ${{ github.head_ref }}
+          From Branch: ${{ github.head_ref }}
+          To Branch: dev
           Requested by: ${{ github.actor }}
