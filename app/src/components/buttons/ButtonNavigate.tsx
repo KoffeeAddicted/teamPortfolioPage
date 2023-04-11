@@ -6,10 +6,9 @@ export default function ButtonNavigate(props: any) {
         position: 'absolute',
         width: '100%',
         zIndex: '100',
-        bottom: '0',
+        bottom: '50%',
         textAlign: 'center',
-      }}
-    >
+      }}>
       {(loop || index !== 0) && (
         <div
           style={{
@@ -21,10 +20,9 @@ export default function ButtonNavigate(props: any) {
             bottom: '0',
             font: '16px/30px sans-serif',
             color: 'rgba(255,255,255,0.8)',
-            left: '0',
+            left: '0%', // Adjusted to center horizontally
           }}
-          onClick={prevHandler}
-        >
+          onClick={prevHandler}>
           ◀
         </div>
       )}
@@ -39,10 +37,9 @@ export default function ButtonNavigate(props: any) {
             bottom: '0',
             font: '16px/30px sans-serif',
             color: 'rgba(255,255,255,0.8)',
-            right: '0',
+            right: '0%', // Adjusted to center horizontally
           }}
-          onClick={nextHandler}
-        >
+          onClick={nextHandler}>
           ▶
         </div>
       )}
