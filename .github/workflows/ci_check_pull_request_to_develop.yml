@@ -39,6 +39,7 @@ jobs:
           From Branch: ${{ github.head_ref }}
           To Branch: dev
           Requested by: ${{ github.actor }}
+          Pull Request URL: ${{ github.event.pull_request.html_url }}
           
   notification-fail:
     name: "Notification when build fail"
@@ -58,3 +59,5 @@ jobs:
           From Branch: ${{ github.head_ref }}
           To Branch: dev
           Requested by: ${{ github.actor }}
+          Pull Request URL: ${{ github.event.pull_request.html_url }}
+
