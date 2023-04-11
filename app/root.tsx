@@ -12,10 +12,12 @@ import { ProSidebarProvider } from 'react-pro-sidebar';
 
 import stylesheet from '~/tailwind.css';
 import button from './src/components/buttons/styles/button.css';
+import typography from './src/components/typographys/styles/typography.css';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
   { rel: 'stylesheet', href: button },
+  { rel: 'stylesheet', href: typography },
 ];
 
 export const meta: MetaFunction = () => ({
