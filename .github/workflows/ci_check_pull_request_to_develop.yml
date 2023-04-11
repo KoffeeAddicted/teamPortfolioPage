@@ -34,7 +34,7 @@ jobs:
         token: ${{secrets.TELEGRAM_BOT_TOKEN}}
         message: |
           Repository: ${{ github.repository }}
-          The GitHub Actions workflow successfully built and merged code.
+          The GitHub Actions workflow has successfully built the code. Please review and approve the code for merging.
           Commit: ${{ github.sha }}
           From Branch: ${{ github.head_ref }}
           To Branch: dev
