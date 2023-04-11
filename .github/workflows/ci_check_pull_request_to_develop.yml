@@ -5,59 +5,35 @@ name: 'Develop pull request validation'
 
 on:
   pull_request:
-    branches: [ "develop" ]
+    branches: ['develop']
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js 14.x
-      uses: actions/setup-node@v3
-      with:
-        node-version: 14.x
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
-    
-  notification-success:
-    name: "Notification when build success"
+      - uses: actions/checkout@v3
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14.x
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
+
+  notification:
+    name: 'Notification'
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-    - name: Send notification
-      uses: appleboy/telegram-action@master
-      with:
-        to: ${{secrets.TELEGRAM_GROUP_ID}}
-        token: ${{secrets.TELEGRAM_BOT_TOKEN}}
-        message: |
-          Repository: ${{ github.repository }}
-          The GitHub Actions workflow has successfully built the code. Please review and approve the code for merging.
-          Commit: ${{ github.sha }}
-          From Branch: ${{ github.head_ref }}
-          To Branch: dev
-          Requested by: ${{ github.actor }}
-          Pull Request URL: ${{ github.event.pull_request.html_url }}
-          
-  notification-fail:
-    name: "Notification when build fail"
-    needs: [build]
-    runs-on: ubuntu-latest
-    if: failure()
-    steps:
-    - name: Send notification
-      uses: appleboy/telegram-action@master
-      with:
-        to: ${{secrets.TELEGRAM_GROUP_ID}}
-        token: ${{secrets.TELEGRAM_BOT_TOKEN}}
-        message: |
-          Repository: ${{ github.repository }}
-          "The GitHub Actions workflow failed to build code."
-          Commit: ${{ github.sha }}
-          From Branch: ${{ github.head_ref }}
-          To Branch: dev
-          Requested by: ${{ github.actor }}
-          Pull Request URL: ${{ github.event.pull_request.html_url }}
-
+      - name: Send notification
+        uses: appleboy/telegram-action@master
+        with:
+          to: -970074716
+          token: 6035590951:AAGR5OFQ-VjZp1wTSO-2I93iMWEzkLI7xyw
+          message: |
+            Repository: ${{ github.repository }}
+            Build successfully, please review and approve code to merge
+            Commit: ${{ github.sha }}
+            Branch: ${{ github.ref_name }}
+            Requested by: ${{ github.actor }}
