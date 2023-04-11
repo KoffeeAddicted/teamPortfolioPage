@@ -35,5 +35,5 @@ jobs:
             Repository: ${{ github.repository }}
             Build successfully, please review and approve code to merge
             Commit: ${{ github.sha }}
-            Branch: ${{ github.ref_name }}
+            Branch: ${{ github.head_ref }}
             Requested by: ${{ github.actor }}
