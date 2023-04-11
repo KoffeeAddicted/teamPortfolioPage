@@ -1,5 +1,6 @@
 import Carousel from 're-carousel';
 import ButtonNavigate from '../buttons/ButtonNavigate';
+import IndicatorNavigate from '../indicator/IndicatorNavigate';
 const CarouselFull = () => {
   return (
     <div className='w-[100vw] h-[100vh] flex justify-center items-center bg-slate-200 z-0'>
@@ -24,7 +25,7 @@ const CarouselFull = () => {
             </div>
           </div>,
         ]}
-        widgets={[ButtonNavigate]}
+        widgets={[ButtonNavigate, IndicatorNavigate]}
       />
     </div>
   );
