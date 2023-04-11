@@ -1,0 +1,40 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: 'Develop pull request validation'
+
+on:
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14.x
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
+    
+  notification:
+    name: "Notification"
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send notification
+      uses: appleboy/telegram-action@master
+      with:
+        to: -970074716
+        token: 6035590951:AAGR5OFQ-VjZp1wTSO-2I93iMWEzkLI7xyw
+        message: |
+          Repository: ${{ github.repository }}
+          Build successfully, please review and approve code to merge
+          Commit: ${{ github.sha }}
+          Branch: ${{ github.ref_name }}
+          Requested by: ${{ github.actor }}
