@@ -21,19 +21,37 @@ jobs:
       - run: npm run build --if-present
       - run: npm test
 
-  notification:
-    name: 'Notification'
+  notification-success:
+    name: 'Notification when build success'
     needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Send notification
         uses: appleboy/telegram-action@master
         with:
-          to: -970074716
-          token: 6035590951:AAGR5OFQ-VjZp1wTSO-2I93iMWEzkLI7xyw
+          to: ${{secrets.TELEGRAM_GROUP_ID}}
+          token: ${{secrets.TELEGRAM_BOT_TOKEN}}
           message: |
             Repository: ${{ github.repository }}
-            Build successfully, please review and approve code to merge
+            The GitHub Actions workflow successfully built and merged code in the branch ${{ github.head_ref }}.
+            Commit: ${{ github.sha }}
+            Branch: ${{ github.head_ref }}
+            Requested by: ${{ github.actor }}
+
+  notification-fail:
+    name: 'Notification when build fail'
+    needs: [build]
+    runs-on: ubuntu-latest
+    if: failure()
+    steps:
+      - name: Send notification
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{secrets.TELEGRAM_GROUP_ID}}
+          token: ${{secrets.TELEGRAM_BOT_TOKEN}}
+          message: |
+            Repository: ${{ github.repository }}
+            "The GitHub Actions workflow failed to build code in the branch ${{ github.head_ref }}."
             Commit: ${{ github.sha }}
             Branch: ${{ github.head_ref }}
             Requested by: ${{ github.actor }}
