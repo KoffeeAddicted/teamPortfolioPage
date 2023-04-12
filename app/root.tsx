@@ -1,4 +1,4 @@
-import { json, LinksFunction, LoaderArgs, MetaFunction } from '@remix-run/node';
+import type { LinksFunction, MetaFunction } from '@remix-run/cloudflare';
 import {
   Links,
   LiveReload,
@@ -6,24 +6,18 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLoaderData,
 } from '@remix-run/react';
 import { PublicLayout } from './src/layouts';
 import { ProSidebarProvider } from 'react-pro-sidebar';
-import { useTranslation } from 'react-i18next';
-import i18next from './src/i18n/i18next.server';
 
 import stylesheet from '~/tailwind.css';
 import button from './src/components/buttons/styles/button.css';
-
-export async function loader({ request }: LoaderArgs) {
-  let locale = await i18next.getLocale(request);
-  return json({ locale });
-}
+import typography from './src/components/typographys/styles/typography.css';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
   { rel: 'stylesheet', href: button },
+  { rel: 'stylesheet', href: typography },
 ];
 
 export const meta: MetaFunction = () => ({
@@ -33,11 +27,11 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function App() {
-  let { locale } = useLoaderData<typeof loader>();
-  let { i18n } = useTranslation();
   return (
-    <html lang={locale} dir={i18n.dir()}>
+    <html lang='en'>
       <head>
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='width=device-width,initial-scale=1' />
         <Meta />
         <Links />
       </head>

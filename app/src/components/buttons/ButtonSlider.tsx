@@ -1,11 +1,7 @@
-const ButtonSlider = ({
-  setState,
-}: {
-  setState: React.Dispatch<React.SetStateAction<any>>;
-}) => {
+const ButtonSlider = () => {
   return (
     <label className='switch'>
-      <input type='checkbox' onClick={setState} />
+      <input type='checkbox' />
       <span>
         <strong></strong>
       </span>

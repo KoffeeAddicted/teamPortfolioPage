@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===================== Font face ================================= */
+
 @font-face {
   font-family: 'Ikaros';
   src: url('../app/src/assets/fonts/Ikaros2.ttf');
@@ -11,6 +13,20 @@
   font-family: 'MuseoModerno';
   src: url('../app/src/assets/fonts/MuseoModernoRegular.ttf');
 }
+
+@font-face {
+  font-family: 'MuseoModernoThicc';
+  src: url('../app/src/assets/fonts/MuseoModernoExtraBold.ttf');
+}
+
+@font-face {
+  font-family: 'MuseoModernoSemiBold';
+  src: url('../app/src/assets/fonts/MuseoModernoSemiBold.ttf');
+}
+
+/* ===================== ******** ================================= */
+
+/* ===================== Header ================================= */
 
 #cf {
   position: relative;
@@ -44,3 +60,5 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* ===================== ******** ================================= */
