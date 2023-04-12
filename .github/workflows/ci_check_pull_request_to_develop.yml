@@ -36,7 +36,7 @@ jobs:
             The GitHub Actions workflow has successfully built the code. Please review and approve the code for merging.
             Commit: ${{ github.sha }}
             From Branch: ${{ github.head_ref }}
-            To Branch: dev
+            To Branch: develop
             Requested by: ${{ github.actor }}
 
   notification-fail:
@@ -55,5 +55,5 @@ jobs:
             "The GitHub Actions workflow failed to build code."
             Commit: ${{ github.sha }}
             From Branch: ${{ github.head_ref }}
-            To Branch: dev
+            To Branch: develop
             Requested by: ${{ github.actor }}
