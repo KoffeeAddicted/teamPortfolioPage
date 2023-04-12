@@ -24,6 +24,11 @@ const CarouselFull = () => {
               Frame 3
             </div>
           </div>,
+          <div style={{ backgroundColor: 'orange', height: '100%' }}>
+            <div className='w-full h-full flex justify-center items-center'>
+              Frame 4
+            </div>
+          </div>,
         ]}
         widgets={[ButtonNavigate, IndicatorNavigate]}
       />
