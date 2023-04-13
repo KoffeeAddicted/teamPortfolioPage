@@ -31,8 +31,10 @@ const ContainerSkills = () => {
         </div>
       </div>
       <Marquee className='text-[60px]'>
-        {skillIcons.map((item) => (
-          <div className='mx-[30px]'>{item.component}</div>
+        {skillIcons.map((item, i) => (
+          <div key={i} className='mx-[30px]'>
+            {item.component}
+          </div>
         ))}
       </Marquee>
     </div>
