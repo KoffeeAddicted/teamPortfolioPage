@@ -13,9 +13,10 @@ module.exports = {
         goldenrod: {
           DEFAULT: '#DAA520',
         },
-        grey : {
+        grey: {
           DEFAULT: '#808080',
-        }
+          light: '#e8e8e8',
+        },
       },
     },
   },
