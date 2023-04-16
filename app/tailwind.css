@@ -24,6 +24,11 @@
   src: url('../app/src/assets/fonts/MuseoModernoSemiBold.ttf');
 }
 
+@font-face {
+  font-family: 'MuseoModernoLight';
+  src: url('../app/src/assets/fonts/MuseoModernoLight.ttf');
+}
+
 /* ===================== ******** ================================= */
 
 /* ===================== Header ================================= */

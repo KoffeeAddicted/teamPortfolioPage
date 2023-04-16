@@ -1,10 +1,17 @@
-import { ContainerIntro, ContainerSkills } from '~/src/containers';
+import {
+  ContainerAbout,
+  ContainerContact,
+  ContainerIntro,
+  ContainerSkills,
+} from '~/src/containers';
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
+    <div>
       <ContainerIntro />
       <ContainerSkills />
+      <ContainerAbout />
+      <ContainerContact />
     </div>
   );
 }
