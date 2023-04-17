@@ -19,7 +19,7 @@ const ContainerSkills = () => {
     },
   ];
   return (
-    <div className='w-full h-[120vh]'>
+    <div className='w-full h-[80vh] md:h-[120vh]'>
       <div className='w-full flex h-[50%] items-center justify-center'>
         <div className="font-['MuseoModernoThicc'] py-5 text-center text-[30px] sm:text-[40px] lg:text-[55px] w-[80%] lg:w-[60%]">
           Our team is an expertise at
@@ -31,8 +31,10 @@ const ContainerSkills = () => {
         </div>
       </div>
       <Marquee className='text-[60px]'>
-        {skillIcons.map((item) => (
-          <div className='mx-[30px]'>{item.component}</div>
+        {skillIcons.map((item, i) => (
+          <div key={i} className='mx-[30px]'>
+            {item.component}
+          </div>
         ))}
       </Marquee>
     </div>
