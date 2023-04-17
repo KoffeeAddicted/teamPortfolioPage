@@ -6,7 +6,7 @@ export default function ButtonNavigate(props: any) {
         position: 'absolute',
         width: '100%',
         zIndex: '100',
-        bottom: '0',
+        bottom: '50%',
         textAlign: 'center',
       }}
     >
