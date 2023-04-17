@@ -1,11 +1,11 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: "Main pull request validation"
+name: 'Main pull request validation'
 
 on:
   pull_request:
-    branches: ["main"]
+    branches: ['main']
 
 jobs:
   build:
@@ -16,12 +16,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          cache: "npm"
+          cache: 'npm'
       - run: npm ci
       - run: npm run build --if-present
 
   notification-success:
-    name: "Notification when build success"
+    name: 'Notification when build success'
     needs: [build]
     runs-on: ubuntu-latest
     steps:
@@ -37,9 +37,10 @@ jobs:
             From Branch: ${{ github.head_ref }}
             To Branch: main
             Requested by: ${{ github.actor }}
+            Pull Request: ${{ github.event.pull_request.html_url }}
 
   notification-fail:
-    name: "Notification when build fail"
+    name: 'Notification when build fail'
     needs: [build]
     runs-on: ubuntu-latest
     if: failure()
@@ -56,3 +57,4 @@ jobs:
             From Branch: ${{ github.head_ref }}
             To Branch: main
             Requested by: ${{ github.actor }}
+            Pull Request: ${{ github.event.pull_request.html_url }}
