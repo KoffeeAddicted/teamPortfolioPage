@@ -36,10 +36,40 @@ const CarouselFull = () => {
                 flexDirection: 'column',
               }}
             >
-              <h2 style={{ marginBottom: '0.5rem', fontSize: '2rem' }}>
-                Title 1
-              </h2>
-              <p style={{ margin: '0' }}>Subtitle 1</p>
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'flex-start',
+                  alignItems: 'center',
+                }}
+              >
+                <div
+                  style={{
+                    marginRight: '1rem',
+                    fontSize: '2rem',
+                    fontFamily: 'MuseoModernoSemiBold',
+                  }}
+                >
+                  Title 1
+                </div>
+                <div
+                  style={{
+                    fontSize: '1.5rem',
+                    fontFamily: 'MuseoModerno',
+                  }}
+                >
+                  Subtitle 1
+                </div>
+              </div>
+              <p
+                className='text-[18px] font-["MuseoModerno"]'
+                style={{ margin: '0' }}
+              >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
+                nam ipsa dolores pariatur quisquam quis error quibusdam dicta
+                mollitia incidunt cum aliquam totam omnis exercitationem ad et,
+                eum, in consequuntur?
+              </p>
             </div>
           </div>,
           <div
@@ -53,7 +83,7 @@ const CarouselFull = () => {
           >
             <img
               src={carsoupic}
-              alt='Image 2'
+              alt='Image 1'
               style={{
                 height: '40%',
                 width: '40%',
@@ -68,10 +98,40 @@ const CarouselFull = () => {
                 flexDirection: 'column',
               }}
             >
-              <h2 style={{ marginBottom: '0.5rem', fontSize: '2rem' }}>
-                Title 1
-              </h2>
-              <p style={{ margin: '0' }}>Subtitle 1</p>
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'flex-start',
+                  alignItems: 'center',
+                }}
+              >
+                <div
+                  style={{
+                    marginRight: '1rem',
+                    fontSize: '2rem',
+                    fontFamily: 'MuseoModernoSemiBold',
+                  }}
+                >
+                  Title 1
+                </div>
+                <div
+                  style={{
+                    fontSize: '1.5rem',
+                    fontFamily: 'MuseoModerno',
+                  }}
+                >
+                  Subtitle 1
+                </div>
+              </div>
+              <p
+                className='text-[18px] font-["MuseoModerno"]'
+                style={{ margin: '0' }}
+              >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
+                nam ipsa dolores pariatur quisquam quis error quibusdam dicta
+                mollitia incidunt cum aliquam totam omnis exercitationem ad et,
+                eum, in consequuntur?
+              </p>
             </div>
           </div>,
           <div
@@ -85,7 +145,7 @@ const CarouselFull = () => {
           >
             <img
               src={carsoupic}
-              alt='Image 3'
+              alt='Image 1'
               style={{
                 height: '40%',
                 width: '40%',
@@ -100,10 +160,40 @@ const CarouselFull = () => {
                 flexDirection: 'column',
               }}
             >
-              <h2 style={{ marginBottom: '0.5rem', fontSize: '2rem' }}>
-                Title 1
-              </h2>
-              <p style={{ margin: '0' }}>Subtitle 1</p>
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'flex-start',
+                  alignItems: 'center',
+                }}
+              >
+                <div
+                  style={{
+                    marginRight: '1rem',
+                    fontSize: '2rem',
+                    fontFamily: 'MuseoModernoSemiBold',
+                  }}
+                >
+                  Title 1
+                </div>
+                <div
+                  style={{
+                    fontSize: '1.5rem',
+                    fontFamily: 'MuseoModerno',
+                  }}
+                >
+                  Subtitle 1
+                </div>
+              </div>
+              <p
+                className='text-[18px] font-["MuseoModerno"]'
+                style={{ margin: '0' }}
+              >
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
+                nam ipsa dolores pariatur quisquam quis error quibusdam dicta
+                mollitia incidunt cum aliquam totam omnis exercitationem ad et,
+                eum, in consequuntur?
+              </p>
             </div>
           </div>,
         ]}
