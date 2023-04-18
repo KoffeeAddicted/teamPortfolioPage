@@ -31,21 +31,24 @@ const CarouselFull = () => {
             />
             <div
               style={{
-                marginLeft: '1rem',
                 display: 'flex',
+                justifyContent: 'flex-start',
+                alignItems: 'center',
                 flexDirection: 'column',
+                textAlign: 'center',
               }}
             >
               <div
                 style={{
                   display: 'flex',
                   justifyContent: 'flex-start',
-                  alignItems: 'center',
+                  alignItems: 'flex-start',
+                  flexDirection: 'column',
                 }}
               >
                 <div
                   style={{
-                    marginRight: '1rem',
+                    marginBottom: '0.5rem',
                     fontSize: '2rem',
                     fontFamily: 'MuseoModernoSemiBold',
                   }}
@@ -93,21 +96,24 @@ const CarouselFull = () => {
             />
             <div
               style={{
-                marginLeft: '1rem',
                 display: 'flex',
+                justifyContent: 'flex-start',
+                alignItems: 'center',
                 flexDirection: 'column',
+                textAlign: 'center',
               }}
             >
               <div
                 style={{
                   display: 'flex',
                   justifyContent: 'flex-start',
-                  alignItems: 'center',
+                  alignItems: 'flex-start',
+                  flexDirection: 'column',
                 }}
               >
                 <div
                   style={{
-                    marginRight: '1rem',
+                    marginBottom: '0.5rem',
                     fontSize: '2rem',
                     fontFamily: 'MuseoModernoSemiBold',
                   }}
@@ -155,21 +161,24 @@ const CarouselFull = () => {
             />
             <div
               style={{
-                marginLeft: '1rem',
                 display: 'flex',
+                justifyContent: 'flex-start',
+                alignItems: 'center',
                 flexDirection: 'column',
+                textAlign: 'center',
               }}
             >
               <div
                 style={{
                   display: 'flex',
                   justifyContent: 'flex-start',
-                  alignItems: 'center',
+                  alignItems: 'flex-start',
+                  flexDirection: 'column',
                 }}
               >
                 <div
                   style={{
-                    marginRight: '1rem',
+                    marginBottom: '0.5rem',
                     fontSize: '2rem',
                     fontFamily: 'MuseoModernoSemiBold',
                   }}
