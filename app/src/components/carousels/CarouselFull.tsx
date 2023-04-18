@@ -36,6 +36,8 @@ const CarouselFull = () => {
                 alignItems: 'center',
                 flexDirection: 'column',
                 textAlign: 'center',
+                width: '80%',
+                maxWidth: '800px',
               }}
             >
               <div
@@ -65,7 +67,7 @@ const CarouselFull = () => {
                 </div>
               </div>
               <p
-                className='text-[18px] font-["MuseoModerno"]'
+                className='text-[18px] font-["MuseoModerno"] overflow-hidden'
                 style={{ margin: '0' }}
               >
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
@@ -101,6 +103,8 @@ const CarouselFull = () => {
                 alignItems: 'center',
                 flexDirection: 'column',
                 textAlign: 'center',
+                width: '80%',
+                maxWidth: '800px',
               }}
             >
               <div
@@ -130,7 +134,7 @@ const CarouselFull = () => {
                 </div>
               </div>
               <p
-                className='text-[18px] font-["MuseoModerno"]'
+                className='text-[18px] font-["MuseoModerno"] overflow-hidden'
                 style={{ margin: '0' }}
               >
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
@@ -166,6 +170,8 @@ const CarouselFull = () => {
                 alignItems: 'center',
                 flexDirection: 'column',
                 textAlign: 'center',
+                width: '80%',
+                maxWidth: '800px',
               }}
             >
               <div
@@ -195,7 +201,7 @@ const CarouselFull = () => {
                 </div>
               </div>
               <p
-                className='text-[18px] font-["MuseoModerno"]'
+                className='text-[18px] font-["MuseoModerno"] overflow-hidden'
                 style={{ margin: '0' }}
               >
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
