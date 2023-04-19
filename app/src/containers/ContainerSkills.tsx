@@ -2,31 +2,36 @@ import Marquee from 'react-fast-marquee';
 
 import { TypographySkill } from '../components';
 import { skillIcons } from '../data/skill';
+import { useT } from '../hooks/usei18n';
 
 const ContainerSkills = () => {
+  let t = useT('translation');
   let skillKeywords = [
     {
       style: 'text-tortilla',
-      content: 'generating',
+      content: t('skills.advantage1'),
     },
     {
       style: 'text-tawny',
-      content: 'maintaining',
+      content: t('skills.advantage2'),
     },
     {
       style: 'text-goldenrod',
-      content: 'optimizing',
+      content: t('skills.advantage3'),
     },
   ];
   return (
     <div className='w-full h-[80vh] md:h-[120vh]'>
       <div className='w-full flex h-[50%] items-center justify-center'>
         <div className="font-['MuseoModernoThicc'] py-5 text-center text-[30px] sm:text-[40px] lg:text-[55px] w-[80%] lg:w-[60%]">
-          Our team is an expertise at
+          {t('skills.intro')}
           <br />
-          <TypographySkill ulItems={skillKeywords} linkingText='project' />
+          <TypographySkill
+            ulItems={skillKeywords}
+            linkingText={t('skills.projects')}
+          />
           <span className='font-["MuseoModernoSemiBold"] text-[12px] sm:text-[20px] lg:text-[30px]'>
-            with modern frameworks and languages
+            {t('skills.frameworks')}
           </span>
         </div>
       </div>
