@@ -25,6 +25,7 @@ import { removeTrailingSlash } from './src/utils/removeTrailingSlash';
 import en from '../public/locales/en';
 import vn from '../public/locales/vn';
 import { i18n, localeCookie } from './i18n.server';
+import { useDirection } from './src/hooks/usei18n';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
@@ -55,9 +56,11 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   let { locale } = useLoaderData<typeof loader>();
+  console.log('locale', locale);
+  let dir = useDirection();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={dir}>
       <head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width,initial-scale=1' />
