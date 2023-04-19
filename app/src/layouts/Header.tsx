@@ -8,11 +8,20 @@ import { BiMenuAltRight } from 'react-icons/bi';
 import { ButtonSlider } from '../components';
 import clsx from 'clsx';
 import { useSrollDirection } from '../hooks';
+import { useT } from '../hooks/usei18n';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const { toggleSidebar } = useProSidebar();
   const scrollDirection = useSrollDirection();
+  const [onCheck, setOnCheck] = useState(false);
+  let { i18n } = useTranslation();
 
+  useEffect(() => {
+    i18n.changeLanguage(onCheck ? 'vn' : 'en');
+  }, [onCheck]);
+  let t = useT('translation');
   return (
     <div
       className={clsx(
@@ -35,14 +44,14 @@ const Header = () => {
               'lg:gap-[80px]'
             )}
           >
-            <div>Home</div>
+            <div>{t('header.home')}</div>
             <div>Contact</div>
             <div>About</div>
           </div>
           <div className='flex gap-10 mr-12 items-center'>
             <BsTelephone />
             <AiOutlineMail />
-            <ButtonSlider />
+            <ButtonSlider setOnCheck={setOnCheck} />
           </div>
         </div>
         <div className='md:hidden text-[30px] pr-3'>
@@ -54,7 +63,7 @@ const Header = () => {
               <div className='flex gap-10 py-8 w-full justify-center text-[14px] items-center'>
                 <BsTelephone />
                 <AiOutlineMail />
-                <ButtonSlider />
+                <ButtonSlider setOnCheck={setOnCheck} />
               </div>
             </Menu>
           </Sidebar>
