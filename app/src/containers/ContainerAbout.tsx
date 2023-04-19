@@ -4,7 +4,10 @@ import { useT } from '../hooks/usei18n';
 const ContainerAbout = () => {
   let t = useT('translation');
   return (
-    <div className='w-full h-fit text-[30px] sm:text-[40px] lg:text-[55px] font-["MuseoModernoThicc"]'>
+    <div
+      id='aboutSection'
+      className='w-full h-fit text-[30px] sm:text-[40px] lg:text-[55px] font-["MuseoModernoThicc"]'
+    >
       <div className='h-fit w-full flex justify-center pb-[50px]'>
         <div>{t('about.title')}</div>
       </div>

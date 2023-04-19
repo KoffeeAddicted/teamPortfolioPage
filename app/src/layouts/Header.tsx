@@ -17,11 +17,24 @@ const Header = () => {
   const scrollDirection = useSrollDirection();
   const [onCheck, setOnCheck] = useState(false);
   let { i18n } = useTranslation();
+  let t = useT('translation');
 
   useEffect(() => {
     i18n.changeLanguage(onCheck ? 'vn' : 'en');
   }, [onCheck]);
-  let t = useT('translation');
+
+  const handleClickScroll = (id: string) => {
+    const element = document.getElementById(id);
+    console.log('element', element);
+    if (element) {
+      if (id === 'homeSection') {
+        window.scrollTo(0, 0);
+      } else {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <div
       className={clsx(
@@ -44,9 +57,24 @@ const Header = () => {
               'lg:gap-[80px]'
             )}
           >
-            <div>{t('header.home')}</div>
-            <div>{t('header.contact')}</div>
-            <div>{t('header.about')}</div>
+            <div
+              className='cursor-pointer'
+              onClick={() => handleClickScroll('homeSection')}
+            >
+              {t('header.home')}
+            </div>
+            <div
+              className='cursor-pointer'
+              onClick={() => handleClickScroll('aboutSection')}
+            >
+              {t('header.about')}
+            </div>
+            <div
+              className='cursor-pointer'
+              onClick={() => handleClickScroll('contactSection')}
+            >
+              {t('header.contact')}
+            </div>
           </div>
           <div className='flex gap-10 mr-12 items-center'>
             <BsTelephone />
@@ -57,9 +85,15 @@ const Header = () => {
         <div className='md:hidden text-[30px] pr-3'>
           <Sidebar breakPoint='always' rtl className='bg-[white]'>
             <Menu className='text-[14px] text-center'>
-              <MenuItem>{t('header.home')}</MenuItem>
-              <MenuItem>{t('header.contact')}</MenuItem>
-              <MenuItem>{t('header.about')}</MenuItem>
+              <MenuItem onClick={() => handleClickScroll('homeSection')}>
+                {t('header.home')}
+              </MenuItem>
+              <MenuItem onClick={() => handleClickScroll('aboutSection')}>
+                {t('header.about')}
+              </MenuItem>
+              <MenuItem onClick={() => handleClickScroll('contactSection')}>
+                {t('header.contact')}
+              </MenuItem>
               <div className='flex gap-10 py-8 w-full justify-center text-[14px] items-center'>
                 <BsTelephone />
                 <AiOutlineMail />
