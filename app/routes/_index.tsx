@@ -3,6 +3,7 @@ import {
   ContainerContact,
   ContainerIntro,
   ContainerSkills,
+  ContainerWork,
 } from '~/src/containers';
 
 export default function Index() {
@@ -10,6 +11,7 @@ export default function Index() {
     <div>
       <ContainerIntro />
       <ContainerSkills />
+      <ContainerWork />
       <ContainerAbout />
       <ContainerContact />
     </div>
