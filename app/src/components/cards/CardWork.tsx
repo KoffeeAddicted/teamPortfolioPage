@@ -7,13 +7,13 @@ const CardWork = () => {
         src={img}
         alt='workflow-bg'
       />
-      <div className='pl-10 pt-10 font-["MuseoModernoSemiBold"] text-[30px]'>
+      <div className='pl-10 pt-10 font-["MuseoModernoSemiBold"] text-[25px] md:text-[30px]'>
         <span className='border-4 border-tawny px-3 mr-3 rounded-[50%]'>
           1.
         </span>
         Business Analysis
       </div>
-      <div className='w-full pt-5 flex justify-center items-center font-["MuseoModerno"] text-[25px]'>
+      <div className='w-full pt-5 flex justify-center items-center font-["MuseoModerno"] text-[20px] md:text-[25px]'>
         <div className='w-[60%] text-center'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et
