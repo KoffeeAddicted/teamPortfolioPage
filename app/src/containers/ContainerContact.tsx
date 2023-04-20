@@ -9,7 +9,10 @@ import { useT } from '../hooks/usei18n';
 const ContainerContact = () => {
   let t = useT('translation');
   return (
-    <div className='w-full h-[60vh] pl-[40px] bg-grey-light text-[30px] sm:text-[40px] lg:text-[55px] font-["MuseoModernoThicc"]'>
+    <div
+      id='contactSection'
+      className='w-full h-[60vh] pl-[40px] bg-grey-light text-[30px] sm:text-[40px] lg:text-[55px] font-["MuseoModernoThicc"]'
+    >
       <div className='h-fit w-full flex py-[50px]'>
         <div>{t('contact.title')}</div>
       </div>

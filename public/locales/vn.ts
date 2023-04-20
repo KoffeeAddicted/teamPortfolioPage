@@ -10,7 +10,7 @@ export default {
     advantage2: 'bảo trì',
     advantage3: 'hiệu năng',
     projects: 'dự án',
-    frameworks: 'đối với ngôn ngữ và thư viện hiện đại',
+    frameworks: 'với ngôn ngữ và thư viện hiện đại',
   },
   about: {
     title: 'Giới thiệu',
