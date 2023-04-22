@@ -8,9 +8,9 @@ import carsouselPic4 from '../../assets/images/backgrounds/carousel-pic4.png';
 
 const CarouselFull = () => {
   return (
-    <div className='w-full h-[100vh] flex justify-center items-center bg-slate-200 z-0'>
+    <div className='w-full h-[100vh] flex justify-center items-center bg-slate-200'>
       <Carousel
-        style={{ zIndex: '0' }}
+        //style={{ zIndex: '0' }}
         auto={true}
         loop
         frames={[
