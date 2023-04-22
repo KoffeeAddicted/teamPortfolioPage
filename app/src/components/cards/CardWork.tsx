@@ -1,5 +1,10 @@
 import img from '../../assets/images/backgrounds/meeting.jpg';
-const CardWork = () => {
+
+interface ICardWorkProps {
+  index: number;
+  title: string;
+}
+const CardWork = ({ title, index }: ICardWorkProps) => {
   return (
     <div className='h-[40.5vh] ease-in duration-300 w-full relative bg-white hover:bg-[rgba(255,255,255,.7)]'>
       <img
@@ -7,11 +12,11 @@ const CardWork = () => {
         src={img}
         alt='workflow-bg'
       />
-      <div className='pl-10 pt-10 font-["MuseoModernoSemiBold"] text-[25px] md:text-[30px]'>
+      <div className='pl-10 pt-10 font-["MuseoModernoSemiBold"] text-[22px] md:text-[30px]'>
         <span className='border-4 border-tawny px-3 mr-3 rounded-[50%]'>
-          1.
+          {index + 1}.
         </span>
-        Business Analysis
+        {title}
       </div>
       <div className='w-full pt-5 flex justify-center items-center font-["MuseoModerno"] text-[20px] md:text-[25px]'>
         <div className='w-[60%] text-center'>

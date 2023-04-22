@@ -46,7 +46,7 @@ const Header = () => {
       )}
     >
       <div className='w-full h-fit relative flex items-center justify-between'>
-        <div id='cf' className='ml-10'>
+        <div id='cf' className='ml-2 md:ml-10'>
           <img className='top' src={coffee_outline} alt='logo' />
           <img className='bottom' src={coffee_bold} alt='logo_hover' />
         </div>
@@ -89,13 +89,25 @@ const Header = () => {
             className='bg-[white] md:hidden text-[30px] pr-3'
           >
             <Menu className='text-[14px] text-center'>
-              <MenuItem onClick={() => handleClickScroll('homeSection')}>
+              <MenuItem
+                onClick={() => {
+                  handleClickScroll('homeSection'), toggleSidebar();
+                }}
+              >
                 {t('header.home')}
               </MenuItem>
-              <MenuItem onClick={() => handleClickScroll('aboutSection')}>
+              <MenuItem
+                onClick={() => {
+                  handleClickScroll('aboutSection'), toggleSidebar();
+                }}
+              >
                 {t('header.about')}
               </MenuItem>
-              <MenuItem onClick={() => handleClickScroll('contactSection')}>
+              <MenuItem
+                onClick={() => {
+                  handleClickScroll('contactSection'), toggleSidebar();
+                }}
+              >
                 {t('header.contact')}
               </MenuItem>
               <div className='flex gap-10 py-8 w-full justify-center text-[14px] items-center'>

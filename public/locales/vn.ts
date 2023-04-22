@@ -21,4 +21,19 @@ export default {
     phone: '',
     address: '115/60 Trần Đình Xu, Quận 1, TP Hồ Chí Minh',
   },
+  workflow: {
+    title: 'Quy trình',
+    section1: {
+      title: 'Phân tích nhu cầu',
+    },
+    section2: {
+      title: 'Thiết kế giao diện',
+    },
+    section3: {
+      title: 'Phát triển trang web',
+    },
+    section4: {
+      title: 'Tối ưu hiệu năng',
+    },
+  },
 };
