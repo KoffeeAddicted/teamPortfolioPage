@@ -51,21 +51,10 @@ const CarouselFull = () => {
                   flexDirection: 'column',
                 }}
               >
-                <div
-                  style={{
-                    marginBottom: '0.5rem',
-                    fontSize: '2rem',
-                    fontFamily: 'MuseoModernoSemiBold',
-                  }}
-                >
-                  Title 1
+                <div className="font-['MuseoModernoThicc'] py-5 text-center text-[30px] sm:text-[40px] lg:text-[55px] w-[80%] lg:w-[60%]">
+                  Title
                 </div>
-                <div
-                  style={{
-                    fontSize: '1.5rem',
-                    fontFamily: 'MuseoModerno',
-                  }}
-                >
+                <div className='font-["MuseoModernoSemiBold"] text-[12px] sm:text-[20px] lg:text-[30px]'>
                   Subtitle 1
                 </div>
               </div>
@@ -117,21 +106,10 @@ const CarouselFull = () => {
                   flexDirection: 'column',
                 }}
               >
-                <div
-                  style={{
-                    marginBottom: '0.5rem',
-                    fontSize: '2rem',
-                    fontFamily: 'MuseoModernoSemiBold',
-                  }}
-                >
-                  Title 1
+                <div className="font-['MuseoModernoThicc'] py-5 text-center text-[30px] sm:text-[40px] lg:text-[55px] w-[80%] lg:w-[60%]">
+                  Title
                 </div>
-                <div
-                  style={{
-                    fontSize: '1.5rem',
-                    fontFamily: 'MuseoModerno',
-                  }}
-                >
+                <div className='font-["MuseoModernoSemiBold"] text-[12px] sm:text-[20px] lg:text-[30px]'>
                   Subtitle 1
                 </div>
               </div>
@@ -183,21 +161,10 @@ const CarouselFull = () => {
                   flexDirection: 'column',
                 }}
               >
-                <div
-                  style={{
-                    marginBottom: '0.5rem',
-                    fontSize: '2rem',
-                    fontFamily: 'MuseoModernoSemiBold',
-                  }}
-                >
-                  Title 1
+                <div className="font-['MuseoModernoThicc'] py-5 text-center text-[30px] sm:text-[40px] lg:text-[55px] w-[80%] lg:w-[60%]">
+                  Title
                 </div>
-                <div
-                  style={{
-                    fontSize: '1.5rem',
-                    fontFamily: 'MuseoModerno',
-                  }}
-                >
+                <div className='font-["MuseoModernoSemiBold"] text-[12px] sm:text-[20px] lg:text-[30px]'>
                   Subtitle 1
                 </div>
               </div>
