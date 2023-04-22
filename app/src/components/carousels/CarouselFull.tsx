@@ -1,7 +1,11 @@
 import Carousel from 're-carousel';
 import ButtonNavigate from '../buttons/ButtonNavigate';
 import IndicatorNavigate from '../indicator/IndicatorNavigate';
-import carsoupic from '../../assets/images/backgrounds/carouselpic.png';
+import carouselPic1 from '../../assets/images/backgrounds/carousel-pic1.jpeg';
+import carsouselPic2 from '../../assets/images/backgrounds/carousel-pic2.png';
+import carsouselPic3 from '../../assets/images/backgrounds/carousel-pic3.png';
+import carsouselPic4 from '../../assets/images/backgrounds/carousel-pic4.png';
+
 const CarouselFull = () => {
   return (
     <div className='w-full h-[100vh] flex justify-center items-center bg-slate-200 z-0'>
@@ -12,7 +16,7 @@ const CarouselFull = () => {
         frames={[
           <div
             style={{
-              backgroundColor: 'LightGray',
+              backgroundColor: 'Tomatoe',
               height: '100%',
               display: 'flex',
               justifyContent: 'flex-start',
@@ -20,13 +24,13 @@ const CarouselFull = () => {
             }}
           >
             <img
-              src={carsoupic}
+              src={carsouselPic2}
               alt='Image 1'
               style={{
-                height: '40%',
-                width: '40%',
-                maxWidth: '100%',
-                maxHeight: '100%',
+                height: '100%',
+                width: '100%',
+
+                objectFit: 'cover',
               }}
             />
             <div
@@ -79,7 +83,7 @@ const CarouselFull = () => {
           </div>,
           <div
             style={{
-              backgroundColor: 'LightGray',
+              backgroundColor: 'Cornsilk',
               height: '100%',
               display: 'flex',
               justifyContent: 'flex-start',
@@ -87,13 +91,14 @@ const CarouselFull = () => {
             }}
           >
             <img
-              src={carsoupic}
+              src={carsouselPic3}
               alt='Image 1'
               style={{
-                height: '40%',
-                width: '40%',
+                height: '100%',
+                width: '100%',
                 maxWidth: '100%',
                 maxHeight: '100%',
+                objectFit: 'cover',
               }}
             />
             <div
@@ -146,7 +151,7 @@ const CarouselFull = () => {
           </div>,
           <div
             style={{
-              backgroundColor: 'LightGray',
+              backgroundColor: 'LightCyan',
               height: '100%',
               display: 'flex',
               justifyContent: 'flex-start',
@@ -154,13 +159,14 @@ const CarouselFull = () => {
             }}
           >
             <img
-              src={carsoupic}
+              src={carsouselPic4}
               alt='Image 1'
               style={{
-                height: '40%',
-                width: '40%',
+                height: '100%',
+                width: '100%',
                 maxWidth: '100%',
                 maxHeight: '100%',
+                objectFit: 'cover',
               }}
             />
             <div
