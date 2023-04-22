@@ -3,9 +3,9 @@ import ButtonNavigate from '../buttons/ButtonNavigate';
 import IndicatorNavigate from '../indicator/IndicatorNavigate';
 const CarouselFull = () => {
   return (
-    <div className='w-full h-[100vh] flex justify-center items-center bg-slate-200 z-0'>
+    <div className='w-full h-[100vh] flex justify-center items-center bg-slate-200'>
       <Carousel
-        style={{ zIndex: '0' }}
+        //style={{ zIndex: '0' }}
         auto={true}
         loop
         frames={[

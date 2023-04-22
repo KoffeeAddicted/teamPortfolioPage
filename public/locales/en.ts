@@ -21,4 +21,19 @@ export default {
     phone: '',
     address: '115/60 Tran Dinh Xu, District 1, Ho Chi Minh city',
   },
+  workflow: {
+    title: 'Workflow',
+    section1: {
+      title: 'Business Analysis',
+    },
+    section2: {
+      title: 'Design Product',
+    },
+    section3: {
+      title: 'Web Development',
+    },
+    section4: {
+      title: 'Web Optimization',
+    },
+  },
 };

@@ -36,7 +36,7 @@ const ContainerSkills = () => {
         </div>
       </div>
       <div className='pt-[100px]'>
-        <Marquee className='text-[60px]'>
+        <Marquee speed={40} play={true} className='text-[60px]'>
           {skillIcons.map((item, i) => (
             <div key={i} className='mx-[30px]'>
               {item.component}
