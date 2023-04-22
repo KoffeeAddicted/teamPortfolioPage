@@ -9,7 +9,7 @@ const PublicLayout = (props: any) => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 2000);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -24,10 +24,11 @@ const PublicLayout = (props: any) => {
       </div>
       <>
         <Header />
-        <div className={`${loading === true && 'hidden'}`}>{children}</div>
+        <div className={`${loading === true && 'h-[100vh] overflow-hidden'}`}>
+          {children}
+        </div>
       </>
     </div>
   );
 };
-
 export default PublicLayout;
