@@ -56,7 +56,6 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   let { locale } = useLoaderData<typeof loader>();
-  console.log('locale', locale);
   let dir = useDirection();
 
   return (

@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next';
 
 const Header = () => {
   const { toggleSidebar } = useProSidebar();
+
   const scrollDirection = useSrollDirection();
   const [onCheck, setOnCheck] = useState(false);
   let { i18n } = useTranslation();
@@ -25,7 +26,6 @@ const Header = () => {
 
   const handleClickScroll = (id: string) => {
     const element = document.getElementById(id);
-    console.log('element', element);
     if (element) {
       if (id === 'homeSection') {
         window.scrollTo(0, 0);
@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <div
       className={clsx(
-        'top-0 w-full absolute flex items-center font-["MuseoModerno"] text-[14px] items-between z-20',
+        'top-0 w-full absolute flex items-center font-["MuseoModerno"] text-[14px] items-between z-[999]',
         'lg:text-[18px]',
         scrollDirection === 'up'
           ? 'absolute md:sticky md:border border-t-1 h-[20vh] md:h-[10vh] md:bg-[white]'
@@ -83,7 +83,11 @@ const Header = () => {
           </div>
         </div>
         <div className='md:hidden text-[30px] pr-3'>
-          <Sidebar breakPoint='always' rtl className='bg-[white]'>
+          <Sidebar
+            breakPoint='always'
+            rtl
+            className='bg-[white] md:hidden text-[30px] pr-3'
+          >
             <Menu className='text-[14px] text-center'>
               <MenuItem onClick={() => handleClickScroll('homeSection')}>
                 {t('header.home')}
