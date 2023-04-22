@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Header from './Header';
+import { Loading } from '../components';
 
 const PublicLayout = (props: any) => {
   const { children } = props;
@@ -19,12 +20,11 @@ const PublicLayout = (props: any) => {
           loading === false && 'hidden'
         } overflow-hidden z-[9999] absolute bg-white`}
       >
-        Loadingggg....
+        <Loading />
       </div>
-
       <>
         <Header />
-        <div>{children}</div>
+        <div className={`${loading === true && 'hidden'}`}>{children}</div>
       </>
     </div>
   );
