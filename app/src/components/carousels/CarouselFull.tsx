@@ -27,9 +27,8 @@ const CarouselFull = () => {
               src={carsouselPic2}
               alt='Image 1'
               style={{
-                height: '100%',
-                width: '100%',
-
+                width: '400px',
+                height: 'auto',
                 objectFit: 'cover',
               }}
             />
@@ -94,10 +93,8 @@ const CarouselFull = () => {
               src={carsouselPic3}
               alt='Image 1'
               style={{
-                height: '100%',
-                width: '100%',
-                maxWidth: '100%',
-                maxHeight: '100%',
+                width: '400px',
+                height: 'auto',
                 objectFit: 'cover',
               }}
             />
@@ -162,10 +159,8 @@ const CarouselFull = () => {
               src={carsouselPic4}
               alt='Image 1'
               style={{
-                height: '100%',
-                width: '100%',
-                maxWidth: '100%',
-                maxHeight: '100%',
+                width: '400px',
+                height: 'auto',
                 objectFit: 'cover',
               }}
             />

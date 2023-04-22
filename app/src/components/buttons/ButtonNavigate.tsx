@@ -22,6 +22,7 @@ export default function ButtonNavigate(props: any) {
             font: '16px/30px sans-serif',
             color: 'rgba(255,255,255,0.8)',
             left: '0',
+            fontSize: '50px',
           }}
           onClick={prevHandler}
         >
@@ -40,6 +41,7 @@ export default function ButtonNavigate(props: any) {
             font: '16px/30px sans-serif',
             color: 'rgba(255,255,255,0.8)',
             right: '0',
+            fontSize: '50px',
           }}
           onClick={nextHandler}
         >
