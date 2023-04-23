@@ -9,3 +9,5 @@ export { default as CardProfile } from './cards/CardProfile';
 export { default as CardWork } from './cards/CardWork';
 
 export { default as Loading } from './loading/Loading';
+
+export { default as FrameCarousel } from './farmes/FrameCarousel';
