@@ -19,21 +19,21 @@ const FrameCarousel = ({
       //   backgroundColor: 'Tomatoe',
       // }}
     >
-      <div className='w-full sm:w-1/2 h-full flex justify-center items-center'>
-        <div className='w-fit relative'>
-          <img src={image} alt='Image 1' className='w-[600px] object-cover' />
+      <div className='w-full h-[60vh] sm:w-[45%] sm:h-full flex justify-center items-center'>
+        <div className='w-fit -ml-[20px] sm:m-0 relative px-4'>
+          <img src={image} alt='Image 1' className='w-[800px] object-cover' />
           {image2 && (
             <img
               src={image2}
               alt='Image 2'
-              className='object-cover absolute top-[10%] right-0 left-[50%] w-[200px]'
+              className='object-cover absolute top-[10%] bounce2 right-0 left-[50%] w-[200px] sm:w-[150px] md:w-[200px]'
             />
           )}
         </div>
       </div>
-      <div className='w-full sm:w-1/2 flex flex-col justify-center h-full'>
+      <div className='w-full sm:w-[55%] px-5 sm:p-0 flex flex-col gap-4 justify-center h-fit sm:h-full'>
         <div>
-          <div className='font-["MuseoModernoSemiBold"] text-[12px] sm:text-[20px] lg:text-[30px]'>
+          <div className='font-["MuseoModernoThicc"] text-[26px] sm:text-[30px] lg:text-[35px]'>
             {title}
           </div>
         </div>
