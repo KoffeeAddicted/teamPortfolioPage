@@ -14,13 +14,13 @@ const FrameCarousel = ({
 }: IFrameCarouselProps) => {
   return (
     <div
-      className={`h-full w-full flex flex-col justify-center sm:justify-normal sm:flex-row align-center ${background}`}
+      className={`h-full w-full flex flex-col relative justify-center sm:justify-normal sm:flex-row align-center ${background}`}
       // style={{
       //   backgroundColor: 'Tomatoe',
       // }}
     >
-      <div className='w-full h-[60vh] sm:w-[45%] sm:h-full flex justify-center items-center'>
-        <div className='w-fit -ml-[20px] sm:m-0 relative px-4'>
+      <div className='w-full h-[60vh] sm:w-[55%] absolute top-0 left-0 sm:h-full flex justify-center items-center'>
+        <div className='w-fit sm:m-0 relative'>
           <img src={image} alt='Image 1' className='w-[800px] object-cover' />
           {image2 && (
             <img
@@ -31,18 +31,22 @@ const FrameCarousel = ({
           )}
         </div>
       </div>
-      <div className='w-full sm:w-[55%] px-5 sm:p-0 flex flex-col gap-4 justify-center h-fit sm:h-full'>
-        <div>
-          <div className='font-["MuseoModernoThicc"] text-[26px] sm:text-[30px] lg:text-[35px]'>
-            {title}
+      <div className='w-full flex items-center'>
+        <div className='w-full flex items-center justify-end'>
+          <div className='w-full sm:w-[55%] px-5 sm:p-0 flex flex-col gap-4 justify-center h-fit sm:h-full'>
+            <div>
+              <div className='font-["MuseoModernoThicc"] text-[26px] sm:text-[30px] lg:text-[35px]'>
+                {title}
+              </div>
+            </div>
+            <p
+              className='text-[18px] font-["MuseoModerno"] overflow-hidden pr-5'
+              style={{ margin: '0' }}
+            >
+              {description}
+            </p>
           </div>
         </div>
-        <p
-          className='text-[18px] font-["MuseoModerno"] overflow-hidden pr-5'
-          style={{ margin: '0' }}
-        >
-          {description}
-        </p>
       </div>
     </div>
   );
