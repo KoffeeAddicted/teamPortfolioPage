@@ -13,7 +13,6 @@ export default function ButtonNavigate(props: any) {
       {(loop || index !== 0) && (
         <div
           style={{
-            width: '30px',
             height: '30px',
             cursor: 'pointer',
             userSelect: 'none',
@@ -32,7 +31,6 @@ export default function ButtonNavigate(props: any) {
       {(loop || index !== total - 1) && (
         <div
           style={{
-            width: '30px',
             height: '30px',
             cursor: 'pointer',
             userSelect: 'none',
