@@ -9,7 +9,7 @@ const Box = (props: any) => {
   const texture = useLoader(THREE.TextureLoader, img);
   return (
     <mesh receiveShadow {...props} ref={mesh}>
-      <sphereGeometry attach='geometry' args={[1.5, 48, 48]} />
+      <sphereGeometry attach='geometry' args={[1.75, 48, 48]} />
       <meshBasicMaterial attach='material' toneMapped={false} map={texture} />
     </mesh>
   );
