@@ -17,7 +17,7 @@ const Box = (props: any) => {
 
 const CircleShape = () => {
   return (
-    <div className='w-[40%] h-full'>
+    <div className='w-full h-full'>
       <Canvas shadows flat>
         <directionalLight
           castShadow
