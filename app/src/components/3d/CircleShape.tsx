@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-import img from '../../assets/images/backgrounds/pastel.png';
+import img from '../../assets/images/backgrounds/gradient.png';
 
 const Box = (props: any) => {
   const mesh = useRef();
@@ -17,7 +17,7 @@ const Box = (props: any) => {
 
 const CircleShape = () => {
   return (
-    <div className='w-[100%] h-full'>
+    <div className='w-[40%] h-full'>
       <Canvas shadows flat>
         <directionalLight
           castShadow

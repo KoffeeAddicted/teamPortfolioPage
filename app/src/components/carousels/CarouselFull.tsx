@@ -12,8 +12,10 @@ const CarouselFull = () => {
           <div className='h-full bg-grey-light'>
             <div className='w-full h-full flex justify-center items-center'>
               <CircleShape />
-              <div className='w-full h-full flex items-center'>
-                <div>Frame 1</div>
+              <div className='w-[60%] h-full flex items-center'>
+                <div className="font-['MuseoModernoThicc'] py-5 text-center text-[30px] sm:text-[40px] lg:text-[55px] w-[80%] lg:w-[60%]">
+                  Frame 1
+                </div>
               </div>
             </div>
           </div>,
