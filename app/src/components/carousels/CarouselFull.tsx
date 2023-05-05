@@ -5,19 +5,24 @@ import CircleShape from '../3d/CircleShape';
 import dotGrid from '../../assets/images/backgrounds/dotGrid.png';
 const CarouselFull = () => {
   return (
-    <div className='w-full h-[100vh] flex justify-center items-center bg-slate-200'>
+    <div className='w-full h-[100vh] min-h-[750px] flex justify-center items-center bg-slate-200'>
       <Carousel
         //style={{ zIndex: '0' }}
         loop
         frames={[
           <div className='h-full bg-grey-light relative'>
-            <div className='w-full h-full flex justify-center items-center'>
-              <div className='w-[40%] h-full z-10'>
+            <div className='h-full w-full relative'>
+              <div className='circle-shape bg-[#FDB9C8] absolute right-[15%] -top-[25%] w-[20%] h-[35%] min-w-[400px] min-h-[400px]' />
+              <div className='circle-shape bg-[#F0AEEB] absolute right-[25%] -top-[25%] w-[20%] h-[35%] min-w-[400px] min-h-[400px]' />
+              <div className='circle-shape bg-[#C3E5D7] absolute right-[20%] -top-[20%] w-[20%] h-[35%] min-w-[400px] min-h-[400px]' />
+            </div>
+            <div className='w-full h-full absolute top-0 left-0 flex flex-col-reverse lg:flex-row blur-effect justify-center items-center'>
+              <div className='w-full lg:w-[40%] h-1/2 lg:h-full z-10'>
                 <CircleShape />
               </div>
-              <div className='w-[60%] h-full flex items-center'>
-                <div className='flex flex-col justify-start'>
-                  <div className="font-['MuseoModernoThicc'] py-5 text-[30px] sm:text-[40px] lg:text-[55px] w-[80%] lg:w-[60%]">
+              <div className='w-full lg:w-[60%] h-1/2 lg:h-full flex items-end text-center lg:text-start lg:items-center'>
+                <div className='flex flex-col justify-start gap-5 px-3'>
+                  <div className="font-['MuseoModernoThicc'] py-5 text-[30px] sm:text-[40px] lg:text-[55px] w-full lg:w-[60%]">
                     Frame 1
                   </div>
                   <div>
