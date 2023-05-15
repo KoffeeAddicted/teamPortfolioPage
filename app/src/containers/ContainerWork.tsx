@@ -6,15 +6,19 @@ const ContainerWork = () => {
   const works = [
     {
       title: t('workflow.section1.title'),
+      description: t('workflow.section1.description'),
     },
     {
       title: t('workflow.section2.title'),
+      description: t('workflow.section2.description'),
     },
     {
       title: t('workflow.section3.title'),
+      description: t('workflow.section3.description'),
     },
     {
       title: t('workflow.section4.title'),
+      description: t('workflow.section4.description'),
     },
   ];
 
@@ -24,7 +28,12 @@ const ContainerWork = () => {
         {t('workflow.title')}
       </div>
       {works.map((item, i) => (
-        <CardWork index={i} key={i} title={item.title} />
+        <CardWork
+          index={i}
+          key={i}
+          title={item.title}
+          description={item.description}
+        />
       ))}
     </div>
   );

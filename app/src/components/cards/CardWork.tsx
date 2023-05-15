@@ -3,8 +3,9 @@ import img from '../../assets/images/backgrounds/meeting.jpg';
 interface ICardWorkProps {
   index: number;
   title: string;
+  description: string;
 }
-const CardWork = ({ title, index }: ICardWorkProps) => {
+const CardWork = ({ title, index, description }: ICardWorkProps) => {
   return (
     <div className='h-[40.5vh] ease-in duration-300 w-full relative bg-white hover:bg-[rgba(255,255,255,.7)]'>
       <img
@@ -18,11 +19,8 @@ const CardWork = ({ title, index }: ICardWorkProps) => {
         </span>
         {title}
       </div>
-      <div className='w-full pt-5 flex justify-center items-center font-["MuseoModerno"] text-[20px] md:text-[25px]'>
-        <div className='w-[60%] text-center'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et
-        </div>
+      <div className='w-full pt-5 flex justify-center items-center font-["MuseoModerno"] text-[18px] md:text-[22px]'>
+        <div className='w-[70%] text-center'>{description}</div>
       </div>
     </div>
   );

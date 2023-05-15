@@ -3,6 +3,7 @@ import { useT } from '../hooks/usei18n';
 
 const ContainerAbout = () => {
   let t = useT('translation');
+
   return (
     <div
       id='aboutSection'

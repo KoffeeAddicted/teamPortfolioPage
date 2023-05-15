@@ -1,9 +1,13 @@
-import Carousel from 're-carousel';
-import ButtonNavigate from '../buttons/ButtonNavigate';
-import IndicatorNavigate from '../indicator/IndicatorNavigate';
+// import Carousel from 're-carousel';
+// import ButtonNavigate from '../buttons/ButtonNavigate';
+// import IndicatorNavigate from '../indicator/IndicatorNavigate';
 import CircleShape from '../3d/CircleShape';
 import dotGrid from '../../assets/images/backgrounds/dotGrid.png';
+import { useT } from '../../hooks/usei18n';
+
 const CarouselFull = () => {
+  let t = useT('translation');
+
   return (
     <div className='w-full h-[100vh] min-h-[750px] flex justify-center items-center bg-slate-200'>
       {/* <Carousel
@@ -74,14 +78,11 @@ const CarouselFull = () => {
           <div className='w-full sm:w-[80%] lg:w-[60%] h-1/2 lg:h-full flex items-end text-center lg:text-start lg:items-center'>
             <div className='flex flex-col justify-start gap-5 px-3'>
               <div className="font-['MuseoModernoThicc'] py-5 text-[30px] sm:text-[40px] lg:text-[55px] w-full lg:w-[60%]">
-                Frame 1
+                {t('introduction.title')}
               </div>
               <div>
                 <p className='text-[18px] font-["MuseoModerno"] overflow-hidden pr-[50px]'>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
-                  nam ipsa dolores pariatur quisquam quis error quibusdam dicta
-                  mollitia incidunt cum aliquam totam omnis exercitationem ad
-                  et, eum, in consequuntur?
+                  {t('introduction.description')}
                 </p>
               </div>
             </div>
