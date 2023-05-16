@@ -22,8 +22,8 @@ export default {
   },
   contact: {
     title: 'Contact',
-    email: '',
-    phone: '',
+    email: 'koffeeaddicted@gmail.com',
+    phone: '0779148128',
     address: '115/60 Tran Dinh Xu, District 1, Ho Chi Minh city',
   },
   workflow: {

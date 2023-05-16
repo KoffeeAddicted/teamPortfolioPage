@@ -17,9 +17,9 @@ const ContainerContact = () => {
         <div>{t('contact.title')}</div>
       </div>
       <div className='font-["MuseoModernoLight"] text-[16px] md:text-[20px]'>
-        <div>{t('contact.phone')}</div>
-        <div>{t('contact.email')}</div>
-        <div>{t('contact.address')}</div>
+        <div>Phone: {t('contact.phone')}</div>
+        <div>Email: {t('contact.email')}</div>
+        <div>Address: {t('contact.address')}</div>
       </div>
       <div className='flex gap-[20px] text-[26px] pt-[50px] w-full'>
         <AiFillFacebook />

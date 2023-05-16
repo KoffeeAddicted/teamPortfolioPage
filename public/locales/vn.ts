@@ -22,8 +22,8 @@ export default {
   },
   contact: {
     title: 'Liên hệ',
-    email: '',
-    phone: '',
+    email: 'koffeeaddicted@gmail.com',
+    phone: '0779148128',
     address: '115/60 Trần Đình Xu, Quận 1, TP Hồ Chí Minh',
   },
   workflow: {
