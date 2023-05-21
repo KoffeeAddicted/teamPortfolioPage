@@ -10,6 +10,7 @@ const CarouselFull = () => {
 
   return (
     <div className='w-full h-[100vh] min-h-[750px] flex justify-center items-center bg-slate-200'>
+      {/* Temporary shut down */}
       {/* <Carousel
         loop
         frames={[
@@ -81,7 +82,7 @@ const CarouselFull = () => {
                 {t('introduction.title')}
               </div>
               <div>
-                <p className='text-[18px] font-["MuseoModerno"] overflow-hidden pr-[50px]'>
+                <p className='text-[22px] font-["MuseoModerno"] overflow-hidden pr-[50px]'>
                   {t('introduction.description')}
                 </p>
               </div>
