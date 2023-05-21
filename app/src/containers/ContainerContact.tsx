@@ -11,7 +11,7 @@ const ContainerContact = () => {
   return (
     <div
       id='contactSection'
-      className='w-full h-[60vh] pl-[40px] bg-grey-light text-[30px] sm:text-[40px] lg:text-[55px] font-["MuseoModernoThicc"]'
+      className='w-full h-[60vh] px-[40px] bg-grey-light text-[30px] sm:text-[40px] lg:text-[55px] font-["MuseoModernoThicc"]'
     >
       <div className='h-fit w-full flex py-[50px]'>
         <div>{t('contact.title')}</div>

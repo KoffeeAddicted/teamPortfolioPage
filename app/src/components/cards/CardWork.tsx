@@ -7,7 +7,7 @@ interface ICardWorkProps {
 }
 const CardWork = ({ title, index, description }: ICardWorkProps) => {
   return (
-    <div className='h-[40.5vh] ease-in duration-300 w-full relative bg-white hover:bg-[rgba(255,255,255,.7)]'>
+    <div className='h-fit md:h-[40.5vh] ease-in duration-300 w-full relative bg-white hover:bg-[rgba(255,255,255,.7)]'>
       <img
         className='absolute h-[40vh] w-full object-cover z-[-1]'
         src={img}
@@ -19,8 +19,10 @@ const CardWork = ({ title, index, description }: ICardWorkProps) => {
         </span>
         {title}
       </div>
-      <div className='w-full pt-5 flex justify-center items-center font-["MuseoModerno"] text-[18px] md:text-[22px]'>
-        <div className='w-[70%] text-center'>{description}</div>
+      <div className='w-full h-full pt-5 flex justify-center items-center font-["MuseoModerno"] text-[18px] md:text-[22px]'>
+        <div className='w-[70%] text-ellipsis h-full text-center'>
+          {description}
+        </div>
       </div>
     </div>
   );
