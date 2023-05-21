@@ -3,7 +3,7 @@ import { useT } from '../hooks/usei18n';
 
 let data = [
   {
-    name: 'Nguyễn Văn A',
+    name: 'Đặng Chí Hào',
     position: 'Full-stack developer',
     quote:
       ' I love using my coding skills to solve challenging problems and create solutions that make a real difference for our clients.',
@@ -11,7 +11,7 @@ let data = [
     background: '',
   },
   {
-    name: 'Nguyễn Văn A',
+    name: 'Trần Hùng Hải',
     position: 'Full-stack developer',
     quote:
       "As a developer, I'm always striving for perfection and pushing myself to learn and grow. It's a privilege to be part of a team",
@@ -19,7 +19,7 @@ let data = [
     background: '',
   },
   {
-    name: 'Nguyễn Văn A',
+    name: 'Võ Tấn Phát',
     position: 'Full-stack developer',
     quote:
       " I'm inspired by the creativity and innovation of my colleagues, and I feel fortunate to be part of such collaborative team",
@@ -27,7 +27,7 @@ let data = [
     background: '',
   },
   {
-    name: 'Nguyễn Văn A',
+    name: 'Trần Văn Thịnh',
     position: 'Full-stack developer',
     quote:
       "For me, the most rewarding part of being a developer is seeing the impact that our solutions have on our clients' businesses.",
