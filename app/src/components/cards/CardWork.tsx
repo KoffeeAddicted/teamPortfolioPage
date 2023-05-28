@@ -9,7 +9,7 @@ const CardWork = ({ title, index, description }: ICardWorkProps) => {
   return (
     <div className='h-fit md:h-[40.5vh] ease-in duration-300 w-full relative bg-white hover:bg-[rgba(255,255,255,.7)]'>
       <img
-        className='absolute h-[40vh] w-full object-cover z-[-1]'
+        className='absolute h-full w-full object-cover z-[-1]'
         src={img}
         alt='workflow-bg'
       />
