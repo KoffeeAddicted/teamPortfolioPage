@@ -5,7 +5,7 @@ export default {
     about: 'About',
   },
   introduction: {
-    title: 'Our introduction',
+    title: 'We Make Differences',
     description:
       'Our dev team is a group of skilled individuals who love what they do and are dedicated to delivering exceptional work. We promise to bring the best experience in our products.',
   },

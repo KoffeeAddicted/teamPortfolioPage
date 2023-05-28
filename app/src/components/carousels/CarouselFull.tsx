@@ -76,13 +76,13 @@ const CarouselFull = () => {
           <div className='w-full lg:w-[40%] h-1/2 lg:h-full z-10'>
             <CircleShape />
           </div>
-          <div className='w-full sm:w-[80%] lg:w-[60%] h-1/2 lg:h-full flex items-end text-center lg:text-start lg:items-center'>
+          <div className='w-[70%] sm:w-[80%] lg:w-[60%] h-1/2 lg:h-full flex items-end text-center lg:text-start lg:items-center'>
             <div className='flex flex-col justify-start gap-5 px-3'>
-              <div className="font-['MuseoModernoThicc'] py-5 text-[30px] sm:text-[40px] lg:text-[55px] w-full lg:w-[60%]">
+              <div className="font-['MuseoModernoThicc'] py-5 text-[22px] sm:text-[40px] lg:text-[55px] w-full lg:w-[80%]">
                 {t('introduction.title')}
               </div>
               <div>
-                <p className='text-[22px] font-["MuseoModerno"] overflow-hidden pr-[50px]'>
+                <p className='text-[13px] sm:text-[22px] font-["MuseoModerno"] overflow-hidden lg:pr-[50px]'>
                   {t('introduction.description')}
                 </p>
               </div>
