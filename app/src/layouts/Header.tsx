@@ -5,6 +5,7 @@ import coffee_bold from '../assets/images/logos/coffee_bold.png';
 import { BsTelephone } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BiMenuAltRight } from 'react-icons/bi';
+import { IoMdCloseCircleOutline } from 'react-icons/io';
 import { ButtonSlider } from '../components';
 import clsx from 'clsx';
 import { useSrollDirection } from '../hooks';
@@ -86,7 +87,7 @@ const Header = () => {
           <Sidebar
             breakPoint='always'
             rtl
-            className='bg-[white] md:hidden text-[30px] pr-3'
+            className='bg-[white] text-[30px] pr-3'
           >
             <Menu className='text-[14px] text-center'>
               <MenuItem
@@ -114,6 +115,9 @@ const Header = () => {
                 <BsTelephone />
                 <AiOutlineMail />
                 <ButtonSlider setOnCheck={setOnCheck} />
+              </div>
+              <div className='w-full flex justify-center text-[25px]'>
+                <IoMdCloseCircleOutline onClick={() => toggleSidebar()} />
               </div>
             </Menu>
           </Sidebar>

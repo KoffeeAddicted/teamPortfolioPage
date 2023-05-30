@@ -5,7 +5,7 @@ export default {
     about: 'Giới thiệu',
   },
   introduction: {
-    title: 'Our cec gì đó',
+    title: 'Chúng tôi tạo khác biệt',
     description:
       'Đội ngũ phát triển của chúng tôi là một nhóm các chuyên gia tài năng, đam mê công việc của mình và tận tâm cung cấp những sản phẩm tuyệt vời. Chúng tôi hứa hẹn sẽ mang lại trải nghiệm tốt nhất trong các sản phẩm được xuất hiện.',
   },
