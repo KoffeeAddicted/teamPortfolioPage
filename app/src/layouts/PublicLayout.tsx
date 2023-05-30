@@ -24,7 +24,11 @@ const PublicLayout = (props: any) => {
       </div>
       <>
         <Header />
-        <div className={`${loading === true && 'h-[100vh] overflow-hidden'}`}>
+        <div
+          className={`${
+            loading === true ? 'h-[100vh] overflow-hidden' : 'h-fit'
+          }`}
+        >
           {children}
         </div>
       </>

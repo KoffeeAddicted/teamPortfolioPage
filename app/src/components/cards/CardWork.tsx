@@ -19,7 +19,7 @@ const CardWork = ({ title, index, description }: ICardWorkProps) => {
         </span>
         {title}
       </div>
-      <div className='w-full h-full pt-5 flex justify-center items-center font-["MuseoModerno"] text-[18px] md:text-[22px]'>
+      <div className='w-full h-full py-5 flex justify-center items-center font-["MuseoModerno"] text-[18px] md:text-[22px]'>
         <div className='w-[70%] text-ellipsis h-full text-center'>
           {description}
         </div>
