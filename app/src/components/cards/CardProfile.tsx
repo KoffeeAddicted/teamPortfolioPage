@@ -6,9 +6,10 @@ interface CardProfileProps {
   name: string;
   position: string;
   quote: string;
+  image: string;
 }
 
-const CardProfile = ({ name, position, quote }: CardProfileProps) => {
+const CardProfile = ({ name, position, quote, image }: CardProfileProps) => {
   return (
     <div className='w-[90%] max-w-[600px] relative md:w-[350px] border-2 rounded-[20px]'>
       <div className='w-full'>
@@ -19,7 +20,7 @@ const CardProfile = ({ name, position, quote }: CardProfileProps) => {
       </div>
       <div className='w-full -mt-[70px] gap-4 flex flex-col items-center'>
         <img
-          src={profile}
+          src={image}
           className='h-[120px] w-[120px] bg-white border border-1 drop-shadow-md rounded-[50%] object-cover'
         />
         <div className='text-[22px] font-["MuseoModernoSemiBold"]'>{name}</div>

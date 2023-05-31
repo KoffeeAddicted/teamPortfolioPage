@@ -37,94 +37,96 @@ const Header = () => {
   };
 
   return (
-    <div
-      className={clsx(
-        'top-0 w-full absolute flex items-center font-["MuseoModerno"] text-[14px] items-between z-[999]',
-        'lg:text-[18px]',
-        scrollDirection === 'up'
-          ? 'absolute md:sticky md:border border-t-1 h-[20vh] md:h-[10vh] md:bg-[white]'
-          : 'h-[20vh]'
-      )}
-    >
-      <div className='w-full h-fit relative flex items-center justify-between'>
-        <div id='cf' className='ml-2 md:ml-10'>
-          <img className='top' src={coffee_outline} alt='logo' />
-          <img className='bottom' src={coffee_bold} alt='logo_hover' />
-        </div>
-        <div className='hidden md:flex'>
-          <div
-            className={clsx(
-              'flex gap-[40px] absolute header_menu',
-              'lg:gap-[80px]'
-            )}
-          >
+    <>
+      <div
+        className={clsx(
+          'top-0 w-full absolute flex items-center font-["MuseoModerno"] text-[14px] items-between z-[999]',
+          'lg:text-[18px]',
+          scrollDirection === 'up'
+            ? 'absolute md:sticky md:border border-t-1 h-[20vh] md:h-[10vh] md:bg-[white]'
+            : 'h-[20vh]'
+        )}
+      >
+        <div className='w-full h-fit relative flex items-center justify-between'>
+          <div id='cf' className='ml-2 md:ml-10'>
+            <img className='top' src={coffee_outline} alt='logo' />
+            <img className='bottom' src={coffee_bold} alt='logo_hover' />
+          </div>
+          <div className='hidden md:flex'>
             <div
-              className='cursor-pointer'
-              onClick={() => handleClickScroll('homeSection')}
+              className={clsx(
+                'flex gap-[40px] absolute header_menu',
+                'lg:gap-[80px]'
+              )}
             >
-              {t('header.home')}
+              <div
+                className='cursor-pointer'
+                onClick={() => handleClickScroll('homeSection')}
+              >
+                {t('header.home')}
+              </div>
+              <div
+                className='cursor-pointer'
+                onClick={() => handleClickScroll('aboutSection')}
+              >
+                {t('header.about')}
+              </div>
+              <div
+                className='cursor-pointer'
+                onClick={() => handleClickScroll('contactSection')}
+              >
+                {t('header.contact')}
+              </div>
             </div>
-            <div
-              className='cursor-pointer'
-              onClick={() => handleClickScroll('aboutSection')}
-            >
-              {t('header.about')}
-            </div>
-            <div
-              className='cursor-pointer'
-              onClick={() => handleClickScroll('contactSection')}
-            >
-              {t('header.contact')}
+            <div className='flex gap-10 mr-12 items-center'>
+              <BsTelephone />
+              <AiOutlineMail />
+              <ButtonSlider setOnCheck={setOnCheck} />
             </div>
           </div>
-          <div className='flex gap-10 mr-12 items-center'>
+          <div className='md:hidden text-[30px] pr-3'>
+            <BiMenuAltRight onClick={() => toggleSidebar()} />
+          </div>
+        </div>
+      </div>
+      <Sidebar
+        breakPoint='always'
+        rtl
+        className='bg-[white] text-[30px] z-[9999] pr-3'
+      >
+        <Menu className='text-[14px] text-center'>
+          <MenuItem
+            onClick={() => {
+              handleClickScroll('homeSection'), toggleSidebar();
+            }}
+          >
+            {t('header.home')}
+          </MenuItem>
+          <MenuItem
+            onClick={() => {
+              handleClickScroll('aboutSection'), toggleSidebar();
+            }}
+          >
+            {t('header.about')}
+          </MenuItem>
+          <MenuItem
+            onClick={() => {
+              handleClickScroll('contactSection'), toggleSidebar();
+            }}
+          >
+            {t('header.contact')}
+          </MenuItem>
+          <div className='flex gap-10 py-8 w-full justify-center text-[14px] items-center'>
             <BsTelephone />
             <AiOutlineMail />
             <ButtonSlider setOnCheck={setOnCheck} />
           </div>
-        </div>
-        <div className='md:hidden text-[30px] pr-3'>
-          <Sidebar
-            breakPoint='always'
-            rtl
-            className='bg-[white] text-[30px] pr-3'
-          >
-            <Menu className='text-[14px] text-center'>
-              <MenuItem
-                onClick={() => {
-                  handleClickScroll('homeSection'), toggleSidebar();
-                }}
-              >
-                {t('header.home')}
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  handleClickScroll('aboutSection'), toggleSidebar();
-                }}
-              >
-                {t('header.about')}
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  handleClickScroll('contactSection'), toggleSidebar();
-                }}
-              >
-                {t('header.contact')}
-              </MenuItem>
-              <div className='flex gap-10 py-8 w-full justify-center text-[14px] items-center'>
-                <BsTelephone />
-                <AiOutlineMail />
-                <ButtonSlider setOnCheck={setOnCheck} />
-              </div>
-              <div className='w-full flex justify-center text-[25px]'>
-                <IoMdCloseCircleOutline onClick={() => toggleSidebar()} />
-              </div>
-            </Menu>
-          </Sidebar>
-          <BiMenuAltRight onClick={() => toggleSidebar()} />
-        </div>
-      </div>
-    </div>
+          <div className='w-full flex justify-center text-[25px]'>
+            <IoMdCloseCircleOutline onClick={() => toggleSidebar()} />
+          </div>
+        </Menu>
+      </Sidebar>
+    </>
   );
 };
 
