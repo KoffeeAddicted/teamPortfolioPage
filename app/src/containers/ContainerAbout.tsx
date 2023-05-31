@@ -1,5 +1,6 @@
 import { CardProfile } from '../components';
 import { useT } from '../hooks/usei18n';
+import eric from '../assets/images/backgrounds/eric.jpg';
 
 let data = [
   {
@@ -7,7 +8,7 @@ let data = [
     position: 'Full-stack developer',
     quote:
       ' I love using my coding skills to solve challenging problems and create solutions that make a real difference for our clients.',
-    image: '',
+    image: eric,
     background: '',
   },
   {
@@ -50,6 +51,7 @@ const ContainerAbout = () => {
       <div className='w-full pb-[200px] flex gap-[20px] justify-center flex-wrap'>
         {data.map((item, i) => (
           <CardProfile
+            image={item.image}
             key={i}
             name={item.name}
             position={item.position}

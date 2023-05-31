@@ -18,7 +18,7 @@ const PublicLayout = (props: any) => {
       <div
         className={`w-[100vw] h-[100vh] ${
           loading === false && 'hidden'
-        } overflow-hidden z-[9999] absolute bg-white`}
+        } overflow-hidden z-[99999] absolute bg-white`}
       >
         <Loading />
       </div>
