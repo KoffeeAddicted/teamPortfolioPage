@@ -1,16 +1,15 @@
-import img from '../../assets/images/backgrounds/meeting.jpg';
-
 interface ICardWorkProps {
   index: number;
   title: string;
   description: string;
+  image: string;
 }
-const CardWork = ({ title, index, description }: ICardWorkProps) => {
+const CardWork = ({ title, index, description, image }: ICardWorkProps) => {
   return (
     <div className='h-fit md:h-[40.5vh] ease-in duration-300 w-full relative bg-white hover:bg-[rgba(255,255,255,.7)]'>
       <img
         className='absolute h-full w-full object-cover z-[-1]'
-        src={img}
+        src={image}
         alt='workflow-bg'
       />
       <div className='pl-10 pt-10 font-["MuseoModernoSemiBold"] text-[22px] md:text-[30px]'>
