@@ -7,9 +7,18 @@ interface CardProfileProps {
   position: string;
   quote: string;
   image: string;
+  gitLink: string;
+  inLink: string;
 }
 
-const CardProfile = ({ name, position, quote, image }: CardProfileProps) => {
+const CardProfile = ({
+  name,
+  position,
+  quote,
+  image,
+  gitLink,
+  inLink,
+}: CardProfileProps) => {
   return (
     <div className='w-[90%] max-w-[600px] relative md:w-[350px] border-2 rounded-[20px]'>
       <div className='w-full'>
@@ -24,15 +33,19 @@ const CardProfile = ({ name, position, quote, image }: CardProfileProps) => {
           className='h-[120px] w-[120px] bg-white border border-1 drop-shadow-md rounded-[50%] object-cover'
         />
         <div className='text-[22px] font-["MuseoModernoSemiBold"]'>{name}</div>
-        <div className='text-[18px] font-["MuseoModerno"] border-2 p-1 rounded-[5px] border-dashed border-tawny'>
+        <div className='text-[18px] font-["MuseoModerno"] w-[60%] text-center border-2 p-1 rounded-[5px] border-dashed border-tawny'>
           {position}
         </div>
         <div className='text-[14px] font-["MuseoModerno"] px-5 text-center max-h-[60px] overflow-hidden'>
           {quote}
         </div>
         <div className='flex text-[26px] gap-3 pb-4 text-grey'>
-          <AiOutlineGithub />
-          <AiFillLinkedin />
+          <a target='_blank' rel='noreferrer' href={gitLink}>
+            <AiOutlineGithub />
+          </a>
+          <a target='_blank' rel='noreferrer' href={inLink}>
+            <AiFillLinkedin />
+          </a>
         </div>
       </div>
     </div>
