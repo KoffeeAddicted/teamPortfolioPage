@@ -4,7 +4,7 @@ import { useT } from '../hooks/usei18n';
 import business from '../assets/images/backgrounds/meeting.jpg';
 import design from '../assets/images/backgrounds/design.jpg';
 import develop from '../assets/images/backgrounds/develop.jpg';
-import optiz from '../assets/images/backgrounds/optimization.avif';
+import optiz from '../assets/images/backgrounds/optimization.png';
 const ContainerWork = () => {
   let t = useT('translation');
   const works = [
