@@ -48,8 +48,17 @@ export function loader({ request, context }: LoaderArgs) {
   });
 }
 
+import metaImage from './src/assets/images/backgrounds/metaImage.png';
 export const meta: MetaFunction = () => ({
   title: 'Koffee Addicted',
+  description: 'We promise to bring the best experience in our products.',
+  'og:image': metaImage,
+  'og:title': 'Koffee Addicted',
+  'og:description': 'We promise to bring the best experience in our products.',
+  'twitter:image': metaImage,
+  'twitter:title': 'Koffee Addicted',
+  'twitter:description':
+    'We promise to bring the best experience in our products.',
 });
 
 export default function App() {
