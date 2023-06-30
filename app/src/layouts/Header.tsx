@@ -41,7 +41,7 @@ const Header = () => {
       <div
         className={clsx(
           'top-0 w-full absolute flex items-center font-["MuseoModerno"] text-[14px] items-between z-[999]',
-          'lg:text-[18px]',
+          'lg:text-[18px] transition duration-350 ease-in',
           scrollDirection === 'up'
             ? 'absolute md:sticky md:border border-t-1 h-[20vh] md:h-[10vh] md:bg-[white]'
             : 'h-[20vh]'
